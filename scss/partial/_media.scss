@@ -1,0 +1,30 @@
+@import './variables';
+@import './mixins';
+@include respond-to('large'){
+    body .bg {
+        clip-path: polygon(0 0, 65% 0, 35% 100%, 0% 100%);
+    }
+    main {
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-template-rows: 100%;
+        grid-template-areas: "primary card";
+    }
+    main section.primary {
+        text-align: left;
+        margin: 4em 0 0 4em;
+        a {
+            display: inline-block;
+            padding: $padding;
+        }
+        h1 {
+            font-size: 6em;
+        }
+    }
+    main section.card {
+        align-self: flex-end;
+        margin: 1em;
+    }
+  
+}
+  

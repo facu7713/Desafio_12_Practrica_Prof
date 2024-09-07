@@ -1,0 +1,59 @@
+@import './variables';
+@import './mixins';
+main {
+    color: map-get($colors,texto);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "card" "primary";
+    align-items: start;
+}
+main section.card {
+    grid-area: card;
+    background-color: map-get($colors, secondary );
+    margin: 1em auto;
+    padding: $padding;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    width: 80%;
+        ul {
+            list-style-type: none;
+            li {
+                margin-bottom: 10px;
+                .circulo {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: map-get($colors, accent );
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                strong {
+                    display: inline-block;
+                    margin-left: 40px;
+                }
+            }
+        }
+}
+main section.primary {
+    grid-area: primary;
+    padding: $padding;
+    h1 {
+        font-family: $font-secondary;
+        font-size: 4em;
+    }
+    p {
+        font-size: 1.4em;
+    }
+    a {
+        background-color: map-get($colors, secondary );
+        color: map-get($colors, texto );
+        border-radius: $radius;
+        box-shadow: $shadow;
+        font-weight: bold;
+        display: block;
+        padding: $padding;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
